@@ -75,12 +75,12 @@ st.set_page_config(
 # --------------------------------------------------
 # 2. File paths
 # --------------------------------------------------
-FOLDER = Path(r"C:\Users\Ayush\Documents\Research Papers")
+# FOLDER = Path(r"C:\Users\Ayush\Documents\Research Papers")
 
 # --------------------------------------------------
 # 3. Load option-pricing results
 # --------------------------------------------------
-with open(FOLDER / "dashboard_data.pkl", "rb") as file:
+with open(folder / "dashboard_data.pkl", "rb") as file:
     saved_data = pickle.load(file)
 
 results_all = saved_data["results_all"]
@@ -89,7 +89,7 @@ results_all = saved_data["results_all"]
 # 4. Load historical stock prices
 # --------------------------------------------------
 stock_prices = pd.read_csv(
-    FOLDER / "stock_price_history.csv",
+    folder / "stock_price_history.csv",
     parse_dates=["Date"]
 )
 
