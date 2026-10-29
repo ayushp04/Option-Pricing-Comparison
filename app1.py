@@ -14,7 +14,14 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 
-folder = Path(r"C:\Users\Ayush\Documents\Research Papers")
+# folder = Path(r"C:\Users\Ayush\Documents\Research Papers")
+
+# stock_prices = pd.read_csv(
+#     folder / "stock_price_history.csv",
+#     parse_dates=["Date"]
+# )
+
+folder = Path(__file__).parent
 
 stock_prices = pd.read_csv(
     folder / "stock_price_history.csv",
